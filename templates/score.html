@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .content{
+            margin: 50px 0 0 0;
+        }
+        span{
+             font-size:30px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top" style="background: white;">
+	<div class="container">
+        <span style="float:left; font-size:30px;color:blue;">课程名称</span>
+        <span style="float:right; font-size:30px;color:blue;">成绩</span>
+    </div>
+	</div>
+</nav>
+<div class="content">
+{%for i in range(length) %}
+    <li class="list-group-item" data-toggle="collapse" data-target="#demo{{i}}">
+        <span>{{list[i]['课程名称']}}</span>
+        <span class="score" style="float:right;color: green">{{list[i]['成绩']}}</span>
+    </li>
+    <div id="demo{{i}}" class="collapse">
+        <span>课程代码:{{list[i]['课程代码']}}</span><br>
+        <span>课程名称:{{list[i]['课程名称']}}</span><br>
+        <span>课程性质:{{list[i]['课程性质']}}</span><br>
+        <span>学年:{{list[i]['学年']}}</span><br>
+        <span>学期:{{list[i]['学期']}}</span><br>
+        <span>学分:{{list[i]['学分']}}</span><br>
+        <span>成绩:{{list[i]['成绩']}}</span><br>
+    </div>
+{%endfor%}
+</div>
+ <script>
+//    $(function(){
+//        alert($('#score1').value);
+//        if($('#score1').text>='80'){
+//            $('#score1').css('color','green');
+//        }else{
+//             $('#score1').css('color','red');
+//        }
+//    });
+</script>
+</body>
+</html>
