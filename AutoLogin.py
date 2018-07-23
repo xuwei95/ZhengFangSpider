@@ -8,8 +8,8 @@ import shibie
 
 reload(sys)
 # #初始参数，自己输入的学号，密码。
-# studentnumber = "21506101058"
-# password = "3.1415926"
+# studentnumber = ""
+# password = ""
 #访问教务系统,先得到__VIEWSTATE的值。
 s = requests.session()
 def login(studentnumber,password):
