@@ -100,5 +100,5 @@ def getScore(username, password):
 
 
 if __name__ == '__main__':
-    course_list = getScore('21506101058', '3.1415926')
+    course_list = getScore('xxxx', 'xxxx')
     print(course_list)
